@@ -14,9 +14,9 @@ pipeline {
     stage('Testing') {
       failFast true
       parallel {
-        stage('Java 8') {
+        stage('Java 7') {
           agent {
-            label 'jdk8'
+            label 'jdk7'
           }
           steps {
             sh 'java -version'
